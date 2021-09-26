@@ -1,0 +1,662 @@
+ScreenManager:
+    Login:
+    Option:
+    SmartFarming:
+    Stlp:
+    B_view:
+    buss_by_area:
+
+<Login>:
+    name:"log"
+    md_bg_color:(1,1,1,1)
+    MDLabel:
+        text:"Smart Jammu & Kashmir"
+        font_style:"H6"
+        underline:True
+        size_hint:1,1
+        pos_hint:{"center_x":0.6,"center_y":0.9}
+        theme_text_color:"Custom"
+        text_color:(0,1,0,1)
+    MDTextField:
+        hint_text:"Username"
+        icon_right:"account"
+        icon_right_color:app.theme_cls.primary_color
+        size_hint_x:None
+        width:220
+        font_size:20
+        pos_hint:{'center_x':0.5,'center_y':0.6}
+        color_active:[0,1,0,1]
+        helper_text:"Enter username"
+        helper_text_mode:"on_focus"
+
+    MDTextField:
+        hint_text:"password"
+        icon_right:"eye-off"
+        icon_right_color:app.theme_cls.primary_color
+        size_hint_x:None
+        width:220
+        font_size:20
+        pos_hint:{'center_x':0.5,'center_y':0.5}
+        color_active:[0,1,0,1]
+        helper_text:"Enter password"
+        helper_text_mode:"on_focus"
+        password:True
+
+    MDRoundFlatButton:
+        text:"Log in"
+        pos_hint:{"center_x":.5,"center_y":.4}
+        font_size:15
+        on_press:
+            root.manager.current="option"
+			root.manager.transition.direction = "left"
+
+    MDRoundFlatButton:
+        text:"Forget Password"
+        pos_hint:{"center_x":.5,"center_y":.3}
+        font_size:11
+        on_press:
+            root.on_forget()
+			root.manager.transition.direction = "right"
+
+    MDRoundFlatButton:
+        text:"New User Registration"
+        pos_hint:{"center_x":.5,"center_y":.2}
+        font_size:10
+        on_press:
+            root.manager.transition.direction = "right"
+
+<Option>:
+    name:'option'
+    MDScreen:
+        md_bg_color:(0,1,0,1)
+
+        MDLabel:
+            text:"Smart Jammu & Kashmir"
+            font_style:"H6"
+            underline:True
+            size_hint:1,1
+            pos_hint:{"center_x":0.6,"center_y":.95}
+            theme_text_color:"Custom"
+            text_color:(1,1,1,1)
+        MDCard:
+            orientation:"vertical"
+            size:130,170
+            size_hint:None,None
+            pos_hint:{"center_x":.26,"center_y":.72}
+            md_bg_color:[1,1,1,1]
+            elevation:10
+            AsyncImage:
+                source:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmPbvCfMs4stCF9oQYxtAGivTWz-lQ4XYy2g&usqp=CAU"
+                size_y:1
+
+            MDRoundFlatButton:
+                md_bg_color:(1,1,0,1)
+                text:"Smart Farming"
+                on_press:
+                    root.manager.current="sf"
+                    root.manager.transition.direction = "left"
+
+        MDCard:
+            orientation:"vertical"
+            size:130,170
+            size_hint:None,None
+            pos_hint:{"center_x":.76,"center_y":.72}
+            md_bg_color:[1,1,1,1]
+            elevation:10
+            AsyncImage:
+                source:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTdauFnKn5UgoySaL19VPtvR3GtaeRwvwEUg&usqp=CAU"
+                size_y:1
+
+            MDRoundFlatButton:
+                md_bg_color:(1,1,0,1)
+                text:"Smart x"
+
+        MDCard:
+            orientation:"vertical"
+            size:130,170
+            size_hint:None,None
+            pos_hint:{"center_x":.76,"center_y":.32}
+            md_bg_color:[1,1,1,1]
+            elevation:10
+            AsyncImage:
+                source:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8f9SAPMrChZr6kI_Kh5W4FObMEHe6KybKpA&usqp=CAU"
+                size_y:1
+
+            MDRoundFlatButton:
+                md_bg_color:(1,1,0,1)
+                text:"Smart y"
+
+        MDCard:
+            orientation:"vertical"
+            size:130,170
+            size_hint:None,None
+            pos_hint:{"center_x":.26,"center_y":.32}
+            md_bg_color:[1,1,1,1]
+            elevation:10
+            AsyncImage:
+                source:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSup13Oh-CeAXISLdk4b4P6k1F4UGNVgAw5eQ&usqp=CAU"
+                size_y:1
+
+            MDRoundFlatButton:
+                md_bg_color:(1,1,0,1)
+                text:"Smart z"
+
+<SmartFarming>:
+    name:"sf"
+    MDScreen:
+        md_bg_color:(0,1,0,1)
+        MDIconButton:
+
+            icon: "backlogo.png"
+            user_font_size: "8sp"
+            pos_hint:{"center_x":0.05,"top":1}
+            on_press:
+                root.manager.current="option"
+                root.manager.transition.direction = "right"
+        MDLabel:
+            text:"Smart Jammu & Kashmir"
+            font_style:"H6"
+            underline:True
+            size_hint:1,1
+            pos_hint:{"center_x":0.6,"center_y":.95}
+            theme_text_color:"Custom"
+            text_color:(1,1,1,1)
+        MDLabel:
+            text:"Smart Farming"
+            underline:True
+            font_style:"H6"
+            size_hint:1,1
+            pos_hint:{"center_x":0.75,"center_y":.87}
+            theme_text_color:"Custom"
+            text_color:(1,1,1,1)
+
+        MDCard:
+            orientation:"vertical"
+            size:130,170
+            size_hint:None,None
+            pos_hint:{"center_x":.26,"center_y":.65}
+            md_bg_color:[1,1,1,1]
+            elevation:10
+
+            MDLabel:
+                text:"SOIL TESTING AND LAND PREPARATION"
+                font_style:"Body1"
+                size_hint:1,1
+                size:100,120
+                pos_hint:{"center_x":0.60,"center_y":.9}
+                theme_text_color:"Custom"
+                text_color:(0,0,0,1)
+            MDRoundFlatButton:
+                md_bg_color:(1,1,0,1)
+                text:"Click Here"
+                size_hint:None,None
+                font_size:10
+                pos_hint:{"center_x":.5,"center_y":.2}
+                on_press:
+                    root.manager.current="stlp"
+			        root.manager.transition.direction = "left"
+
+
+        MDCard:
+            orientation:"vertical"
+            size:130,170
+            size_hint:None,None
+            pos_hint:{"center_x":.76,"center_y":.65}
+            md_bg_color:[1,1,1,1]
+            elevation:10
+
+            MDLabel:
+                text:"SEED SELECTION AND SOWING"
+                font_style:"Body1"
+                size_hint:1,1
+                size:100,120
+                pos_hint:{"center_x":0.53,"center_y":.9}
+                theme_text_color:"Custom"
+                text_color:(0,0,0,1)
+            MDRoundFlatButton:
+                md_bg_color:(1,1,0,1)
+                text:"Click Here"
+                font_size:10
+                pos_hint:{"center_x":.5,"center_y":.2}
+
+        MDCard:
+            orientation:"vertical"
+            size:130,170
+            size_hint:None,None
+            pos_hint:{"center_x":.26,"center_y":.25}
+            md_bg_color:[1,1,1,1]
+            elevation:10
+            MDLabel:
+                text:"IRRIGATION AND FERTILIZER"
+                font_style:"Body1"
+                size_hint:1,1
+                size:100,120
+                pos_hint:{"center_x":0.57,"center_y":.9}
+                theme_text_color:"Custom"
+                text_color:(0,0,0,1)
+            MDRoundFlatButton:
+                md_bg_color:(1,1,0,1)
+                text:"Click Here"
+                font_size:10
+                pos_hint:{"center_x":.5,"center_y":.2}
+
+        MDCard:
+            orientation:"vertical"
+            size:130,170
+            size_hint:None,None
+            pos_hint:{"center_x":.76,"center_y":.25}
+            md_bg_color:[1,1,1,1]
+            elevation:10
+            MDLabel:
+                text:"HARVESTING"
+                font_style:"Body1"
+                size_hint:1,1
+                size:100,120
+                pos_hint:{"center_x":0.60,"center_y":.9}
+                theme_text_color:"Custom"
+                text_color:(0,0,0,1)
+            MDRoundFlatButton:
+                md_bg_color:(1,1,0,1)
+                text:"Click Here"
+                font_size:10
+                pos_hint:{"center_x":.5,"center_y":.2}
+
+        MDRectangleFlatButton:
+            md_bg_color:(1,1,1,1)
+            padding:10
+            text:"Book Smart Labour"
+            pos_hint:{"center_x" :0.5,"bottom":0.1,"center_y":0.039}
+            elevation:10
+            on_press:
+                root.manager.current="buss"
+                root.manager.transition.direction = "left"
+
+<Stlp>:
+    name:"stlp"
+    MDScreen:
+        id:screen
+        md_bg_color:(0,1,0,1)
+        MDIconButton:
+            icon: "backlogo.png"
+            user_font_size: "6sp"
+            pos_hint:{"center_x":0.05,"top":1}
+            on_press:
+                root.manager.current="sf"
+                root.manager.transition.direction = "right"
+        MDLabel:
+            text:"Smart Jammu & Kashmir"
+            underline:True
+            font_style:"H6"
+            size_hint:1,1
+            pos_hint:{"center_x":0.6,"center_y":.95}
+            theme_text_color:"Custom"
+            text_color:(1,1,1,1)
+        MDLabel:
+            text:"Smart Farming:Soil Testing And Land _____________Preparation_____________"
+            font_style:"Body1"
+            font_size:16
+            size_hint:1,1
+            pos_hint:{"center_x":0.55,"center_y":.87}
+            theme_text_color:"Custom"
+            text_color:(1,1,1,1)
+
+        MDLabel:
+            bold:True
+            text:"CROP :"
+            font_size:15
+            size_hint:1,1
+            pos_hint:{"center_x":0.58,"center_y":.80}
+            theme_text_color:"Custom"
+            text_color:(1,1,1,1)
+
+        MDDropDownItem:
+            md_bg_color:(0,1,1,1)
+            id: dropdown_item
+            text: "Select"
+            pos_hint: {'center_x': 0.74, 'center_y': 0.8}
+            dropdown_bg: [1, 1, 1, 1]
+            on_release: app.menu.open()
+
+        MDLabel:
+            bold:True
+            text:"LAND AREA:"
+            font_size:15
+            size_hint:1,1
+            pos_hint:{"center_x":0.58,"center_y":.73}
+            theme_text_color:"Custom"
+            text_color:(1,1,1,1)
+
+        MDDropDownItem:
+            md_bg_color:(0,1,1,1)
+            id: dropdown_item2
+            text: "Select"
+            theme_text_color:"Custom"
+            text_color:(0,1,1,1)
+            pos_hint: {'center_x': 0.74, 'center_y': 0.73}
+            dropdown_bg: [1, 1, 1, 1]
+            on_release: app.menu.open()
+
+        MDLabel:
+            bold:True
+            text:"SMART LABOUR REQ:"
+            font_size:15
+            size_hint:1,1
+            pos_hint:{"center_x":0.58,"center_y":.66}
+            theme_text_color:"Custom"
+            text_color:(1,1,1,1)
+        MDTextFieldRect:
+            size_hint: .2, None
+            height: "30dp"
+            pos_hint:{"center_x":0.74,"center_y":.66}
+            multiline:False
+        MDLabel:
+            bold:True
+            text:"LABOUR REQ:"
+            font_size:15
+            size_hint:1,1
+            pos_hint:{"center_x":0.58,"center_y":.59}
+            theme_text_color:"Custom"
+            text_color:(1,1,1,1)
+        MDTextFieldRect:
+            size_hint: .2, None
+            height: "30dp"
+            pos_hint:{"center_x":0.74,"center_y":.59}
+            multiline:False
+
+        MDLabel:
+            bold:True
+            text:"DATE:"
+            font_size:15
+            size_hint:1,1
+            pos_hint:{"center_x":0.58,"center_y":.52}
+            theme_text_color:"Custom"
+            text_color:(1,1,1,1)
+
+        MDRaisedButton:
+            text: "Date1"
+            md_bg_color:(1,1,1,1)
+            size:6,30
+            pos_hint: {'center_x': .55, 'center_y': .52}
+            on_release: root.show_date_picker()
+
+        MDRaisedButton:
+            text: "Date2"
+            md_bg_color:(1,1,1,1)
+            size:6,30
+            pos_hint: {'center_x': .85, 'center_y': .52}
+            on_release: root.show_date_picker()
+
+        MDLabel:
+            bold:True
+            text:"ADDRESS:"
+            font_size:15
+            size_hint:1,1
+            pos_hint:{"center_x":0.58,"center_y":.45}
+            theme_text_color:"Custom"
+            text_color:(1,1,1,1)
+
+        MDTextFieldRect:
+            size_hint: .59, None
+            height: "60dp"
+            pos_hint:{"center_x":0.70,"center_y":.41}
+            multiline:True
+
+        MDLabel:
+            bold:True
+            text:"PINCODE:"
+            font_size:15
+            size_hint:1,1
+            pos_hint:{"center_x":0.58,"center_y":.30}
+            theme_text_color:"Custom"
+            text_color:(1,1,1,1)
+
+        MDTextFieldRect:
+            size_hint: .59, None
+            height: "30dp"
+            pos_hint:{"center_x":0.70,"center_y":.30}
+            multiline:False
+
+        MDLabel:
+            bold:True
+            text:"COST:"
+            font_size:15
+            size_hint:1,1
+            pos_hint:{"center_x":0.58,"center_y":.23}
+            theme_text_color:"Custom"
+            text_color:(1,1,1,1)
+
+        MDTextFieldRect:
+            size_hint: .59, None
+            height: "30dp"
+            pos_hint:{"center_x":0.70,"center_y":.23}
+            multiline:False
+
+
+        MDLabel:
+            bold:True
+            text:"EQUIPMENT NEEDED:"
+            font_size:15
+            size_hint:1,1
+            pos_hint:{"center_x":0.58,"center_y":.16}
+            theme_text_color:"Custom"
+            text_color:(1,1,1,1)
+        MDChip:
+            label: 'machine'
+            check: True
+            icon:""
+            radius:"6dp"
+            pos_hint:{"center_x":0.77,"center_y":.16}
+        MDChip:
+            label: 'mach1'
+            check: True
+            icon:""
+            radius:"6dp"
+            pos_hint:{"center_x":0.18,"center_y":.10}
+        MDChip:
+            label: 'mach2'
+            check: True
+            icon:""
+            radius:"6dp"
+            pos_hint:{"center_x":0.53,"center_y":.10}
+
+        MDChip:
+            label: 'mach3'
+            check: True
+            icon:""
+            radius:"6dp"
+            pos_hint:{"center_x":0.85,"center_y":.10}
+
+        MDRectangleFlatButton:
+            text: "CLICK HERE FOR BOOK"
+            text_color: 0, 0, 1, 1
+            md_bg_color: 1, 1, 0, 1
+            size:80,25
+            pos_hint:{"center_x":0.5,"bottom":.1,"center_y":.025}
+            on_press:
+                root.manager.current="b_view"
+                root.manager.transition.direction="left"
+
+<B_view>:
+    name:"b_view"
+
+    MDScreen:
+        md_bg_color:(0,1,0,1)
+        MDIconButton:
+            icon: "backlogo.png"
+            user_font_size: "6sp"
+            pos_hint:{"center_x":0.05,"top":1}
+            on_press:
+                root.manager.current="stlp"
+                root.manager.transition.direction = "right"
+        MDLabel:
+            text:"Smart Jammu & Kashmir"
+            font_style:"H6"
+            size_hint:1,1
+            underline:True
+            pos_hint:{"center_x":0.6,"center_y":.95}
+            theme_text_color:"Custom"
+            text_color:(1,1,1,1)
+        MDLabel:
+            text:"BUSINESS AS USUAL"
+            bold:True
+            underline:True
+            font_style:"Body1"
+            font_size:16
+            size_hint:1,1
+            pos_hint:{"center_x":0.70,"center_y":.87}
+            theme_text_color:"Custom"
+            text_color:(1,1,1,1)
+        MDLabel:
+            bold:True
+            text:"DATE:"
+            font_size:15
+            size_hint:1,1
+            pos_hint:{"center_x":0.60,"center_y":.80}
+            theme_text_color:"Custom"
+            text_color:(1,1,1,1)
+
+        MDRaisedButton:
+            text: "Date1"
+            md_bg_color:(1,1,1,1)
+            size:6,30
+            pos_hint: {'center_x': .50, 'center_y': .80}
+            on_release: root.show_date_picker()
+
+        MDRaisedButton:
+            text: "Date2"
+            md_bg_color:(1,1,1,1)
+            size:6,30
+            pos_hint: {'center_x': .80, 'center_y': .80}
+            on_release: root.show_date_picker()
+        MDLabel:
+            bold:True
+            text:"SOIL TESTING AND PREPARATION:"
+            font_size:15
+            size_hint:1,1
+            pos_hint:{"center_x":0.55,"center_y":.70}
+            theme_text_color:"Custom"
+            text_color:(1,1,1,1)
+
+        MDRaisedButton:
+            text: "GET DETAIL"
+            md_bg_color:(1,1,1,1)
+            pos_hint: {'center_x': .70, 'center_y': .63}
+            on_release:
+
+        MDLabel:
+            bold:True
+            text:"SEED SELECTION AND SOWING:"
+            font_size:15
+            size_hint:1,1
+            pos_hint:{"center_x":0.55,"center_y":.55}
+            theme_text_color:"Custom"
+            text_color:(1,1,1,1)
+
+        MDRaisedButton:
+            text: "GET DETAIL"
+            md_bg_color:(1,1,1,1)
+            pos_hint: {'center_x': .70, 'center_y': .48}
+            on_release:
+
+        MDLabel:
+            bold:True
+            text:"IRRIGATION AND FERTILIZER:"
+            font_size:15
+            size_hint:1,1
+            pos_hint:{"center_x":0.55,"center_y":.40}
+            theme_text_color:"Custom"
+            text_color:(1,1,1,1)
+
+        MDRaisedButton:
+            text: "GET DETAIL"
+            md_bg_color:(1,1,1,1)
+            pos_hint: {'center_x': .70, 'center_y': .32}
+            on_release:
+
+        MDLabel:
+            bold:True
+            text:"HARVESTING:"
+            font_size:15
+            size_hint:1,1
+            pos_hint:{"center_x":0.55,"center_y":.25}
+            theme_text_color:"Custom"
+            text_color:(1,1,1,1)
+
+        MDRaisedButton:
+            text: "GET DETAIL"
+            md_bg_color:(1,1,1,1)
+            pos_hint: {'center_x': .70, 'center_y': .18}
+            on_release:
+
+
+<buss_by_area>:
+    name:"buss"
+
+    MDScreen:
+        id:screen
+        md_bg_color:(0,1,0,1)
+        MDIconButton:
+            icon: "backlogo.png"
+            user_font_size: "6sp"
+            pos_hint:{"center_x":0.05,"top":1}
+            on_press:
+                root.manager.current="sf"
+                root.manager.transition.direction = "right"
+        MDLabel:
+            text:"Smart Jammu & Kashmir"
+            font_style:"H6"
+            size_hint:1,1
+            underline:True
+            pos_hint:{"center_x":0.6,"center_y":.95}
+            theme_text_color:"Custom"
+            text_color:(1,1,1,1)
+        MDLabel:
+            text:"BUSINESS AS USUAL"
+            bold:True
+            underline:True
+            font_style:"Body1"
+            font_size:16
+            size_hint:1,1
+            pos_hint:{"center_x":0.70,"center_y":.87}
+            theme_text_color:"Custom"
+            text_color:(1,1,1,1)
+        MDLabel:
+            bold:True
+            text:"DATE:"
+            font_size:15
+            size_hint:1,1
+            pos_hint:{"center_x":0.60,"center_y":.80}
+            theme_text_color:"Custom"
+            text_color:(1,1,1,1)
+
+        MDRaisedButton:
+            text: "Date1"
+            md_bg_color:(1,1,1,1)
+            size:6,30
+            pos_hint: {'center_x': .50, 'center_y': .80}
+            on_release: root.show_date_picker()
+
+        MDRaisedButton:
+            text: "Date2"
+            md_bg_color:(1,1,1,1)
+            size:6,30
+            pos_hint: {'center_x': .80, 'center_y': .80}
+            on_release: root.show_date_picker()
+
+        MDTextFieldRect:
+            size_hint: .3, None
+            hint_text:"DISTRICT"
+            font_size:12
+            height: "30dp"
+            pos_hint:{"center_x":0.25,"center_y":.70}
+            multiline:False
+
+        MDTextFieldRect:
+            size_hint: .3, None
+            hint_text:"TESHIL"
+            font_size:12
+            height: "30dp"
+            pos_hint:{"center_x":0.60,"center_y":.70}
+            multiline:False
+
+            
